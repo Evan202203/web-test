@@ -152,7 +152,7 @@
                 const currentPrize = prizes.find(p => p.id === currentPrizeId);
                 if (currentPrize.winners.length >= currentPrize.count) { openAlert("抽獎失敗", "該獎項名額已滿！請選擇其他獎項或增加名額。"); return; }
                 setIsRolling(true); setShowConfetti(false);
-                let counter = 0; const maxRolls = 30; const speed = 200;
+                let counter = 0; const maxRolls = 30; const speed = 150;
                 const interval = setInterval(() => {
                     const randomIndex = Math.floor(Math.random() * availableNames.length);
                     setDisplayParticipate(availableNames[randomIndex]);
